@@ -1,0 +1,220 @@
+:root {
+    --color-background: #fff9f5;
+    --color-text: #4a4a4a;
+    --color-accent: #e8b4b4;
+    --color-secondary: #f5e6e6;
+    --color-button: #d4a5a5;
+    --color-button-hover: #c49292;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Landing Page Styles */
+#landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+#landing h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Button Styles */
+.primary-button {
+    background-color: var(--color-button);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-sans);
+}
+
+.primary-button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.secondary-button {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: 1px solid var(--color-accent);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+/* Manual Section Styles */
+#manual {
+    padding: 2rem 0;
+}
+
+.mode-toggle {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step h2 {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.instruction {
+    font-size: 1.1rem;
+}
+
+.note,
+.playful-note,
+.suggestion {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+.visual-hint {
+    margin-top: 1.5rem;
+}
+
+.image-placeholder {
+    background-color: var(--color-secondary);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--color-text);
+    font-style: italic;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-button {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    #landing h1 {
+        font-size: 2.5rem;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+
+    .step h2 {
+        font-size: 1.5rem;
+    }
+
+    .instruction {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #landing h1 {
+        font-size: 2rem;
+    }
+
+    .primary-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .step {
+        padding: 1rem;
+    }
+}

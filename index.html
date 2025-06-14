@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senorita Birthday Box</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Landing Page -->
+        <section id="landing" class="active">
+            <h1>Senorita Birthday Box</h1>
+            <p class="welcome-text">A journey of memories, waiting to be unwrapped...</p>
+            <button id="startButton" class="primary-button">Begin This Journey</button>
+        </section>
+
+        <!-- Step-by-Step Manual -->
+        <section id="manual" class="hidden">
+            <div class="mode-toggle">
+                <button id="toggleMode" class="secondary-button">Switch to Reassembly Mode</button>
+            </div>
+
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="step" data-step="1">
+                    <h2>Step 1: Begin This Journey</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>Welcome to your first layer. Look for the paper labeled "1" and gently lift it to begin.
+                            </p>
+                            <div class="visual-hint">
+                                <!-- Image placeholder -->
+                                <div class="image-placeholder">Welcome Card Image</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step" data-step="2">
+                    <h2>Step 2: What We Say Without Saying</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>In this layer, you'll find 16 quote cards and 3 scrolls. Take your time to read each one.
+                            </p>
+                            <p class="note">Remember: Don't open the other scrolls until their special moment arrives.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step" data-step="3">
+                    <h2>Step 3: A Hug from Afar</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>Lift this layer to discover a special T-shirt, some sweet treats, and a personal tag.</p>
+                            <p class="playful-note">A little something to wear and something to share!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step" data-step="4">
+                    <h2>Step 4: 10 Quiet Truths About You</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>Here you'll find a handmade booklet, filled with words meant just for you.</p>
+                            <p class="suggestion">Maybe someday, you'll write back?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button id="prevStep" class="nav-button" disabled>Previous</button>
+                <button id="nextStep" class="nav-button">Next</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

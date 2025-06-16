@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signorita Birthday Box</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Storybook Login Page -->
+        <section id="login" class="active">
+            <div class="storybook">
+                <div class="storybook-page">
+                    <h1>Once Upon a Time...</h1>
+                    <div class="story-content">
+                        <p class="story-text">In a world of memories and dreams, there lived a special someone...</p>
+                        <p class="story-text">Someone whose smile could light up the darkest night...</p>
+                        <p class="story-text">Someone who made every moment magical...</p>
+                        <p class="story-text">Someone who was known by a very special name...</p>
+
+                        <div class="magic-mirror">
+                            <p class="mirror-text">What is this special name?</p>
+                            <div class="mirror-input">
+                                <input type="text" id="nicknameInput" placeholder="Whisper the name..."
+                                    class="romantic-input">
+                                <button id="unlockButton" class="primary-button">Unlock the Magic</button>
+                            </div>
+                            <p class="error-message hidden">That's not quite right... Try again with the name I use for
+                                you ❤️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landing Page -->
+        <section id="landing" class="hidden">
+            <h1>Signorita Birthday Box</h1>
+            <p class="welcome-text">A journey of memories, waiting to be unwrapped...</p>
+            <button id="startButton" class="primary-button">Begin This Journey</button>
+        </section>
+
+        <!-- Manual Section -->
+        <section id="manual" class="hidden">
+            <div class="steps-container">
+                <!-- Step 1: Bottom Note -->
+                <div class="step" data-step="1">
+                    <h2>Your First Memory</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>📜 Read the "Happy Birthday Eyaa" note placed at the very bottom of the cover.</p>
+                            <p>This note is your invitation. It's where the story starts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: First Paper -->
+                <div class="step" data-step="2">
+                    <h2>First Gentle Removal</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>✨ Gently remove the paper titled: "Mtlsme4 deh dlwa2ty"</p>
+                            <p>Be careful! There's another note right beneath it.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: First Strip -->
+                <div class="step" data-step="3">
+                    <h2>First Strip</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>🪄 Remove the first strip from Signorita Check List.</p>
+                            <p>It's your key to unlocking the first memory layer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: First Envelope -->
+                <div class="step" data-step="4">
+                    <h2>The First Envelope</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>✉ You'll now see an envelope. Inside are 2 very special cards:</p>
+                            <ul>
+                                <li>A letter that explains the heart of this gift</li>
+                                <li>A wallet card — a little prayer you'll carry everywhere</li>
+                            </ul>
+                            <p>💖 Read them both and set them aside.</p>
+                            <p>📋 Check off Strip #7 & #8 on your Signorita Checklist.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steps 5-14: 10 Things I Love About You -->
+                <div class="step" data-step="5">
+                    <h2>10 Things I Love About You - #1</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>Your smile that lights up my world</p>
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="1">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="6">
+                    <h2>10 Things I Love About You - #2</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>The way you make every moment special</p>
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="2">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="7">
+                    <h2>10 Things I Love About You - #3</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="3">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="8">
+                    <h2>10 Things I Love About You - #4</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="4">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="9">
+                    <h2>10 Things I Love About You - #5</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="5">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="10">
+                    <h2>10 Things I Love About You - #6</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="6">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="11">
+                    <h2>10 Things I Love About You - #7</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="7">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="12">
+                    <h2>10 Things I Love About You - #8</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="8">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="13">
+                    <h2>10 Things I Love About You - #9</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="9">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="14">
+                    <h2>10 Things I Love About You - #10</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p class="note">Check this one when you've read it ❤️</p>
+                            <button class="sign-button" data-check="10">✔ I signed this one</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 15: Final Booklet Page -->
+                <div class="step" data-step="15">
+                    <h2>Final Booklet Page</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>🎯 Remove Strip #4</p>
+                            <p>📋 Check the heart beside it</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 16: Keychain -->
+                <div class="step" data-step="16">
+                    <h2>Keychain</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>🔑 Pick up the keychain.</p>
+                            <p>Maybe it's better than yours. Maybe not. But it's from someone who thought of you deeply.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 17: Reveal Next Layer -->
+                <div class="step" data-step="17">
+                    <h2>Reveal Next Layer</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>📦 If Section 1 is now empty, lift it carefully from the center circle to reveal the next
+                                layer beneath.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 18: Second Layer -->
+                <div class="step" data-step="18">
+                    <h2>Second Layer: "What We Say Without Saying"</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>💬 In front of you is a box. Open it and read the cards inside — they're the echoes of
+                                your own voice and ours.</p>
+                            <p>📦 When done, close the box, remove Strip #2</p>
+                            <p>📋 Check the heart.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 19: Scrolls -->
+                <div class="step" data-step="19">
+                    <h2>The Scrolls of Time</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>🎀 You'll find 4 scrolls wrapped in red ribbons.</p>
+                            <p>Open only the one marked "Open Now", read it, sign it, set it aside.</p>
+                            <p>🪄 Remove the third strip</p>
+                            <p>📋 Check Heart #3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 20: Warning -->
+                <div class="step" data-step="20">
+                    <h2>WARNING ⚠</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>🚫 Do not open the other scrolls unless you truly feel the moment written on each one.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 21: Layer 3 Reveal -->
+                <div class="step" data-step="21">
+                    <h2>Layer 3 Reveal</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>🪄 If scroll section is empty, remove the board — you're almost there.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 22: Final Layer -->
+                <div class="step" data-step="22">
+                    <h2>The Final Layer</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>👕 You'll now see a T-shirt, a note, and a squishy toy.</p>
+                            <p>📃 Read the note. 🐻 Check the toy.</p>
+                            <p>📋 Remove Strips #5 and #6, then check the hearts beside them.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 23: Try It On -->
+                <div class="step" data-step="23">
+                    <h2>Try It On</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>💗 Try the shirt.</p>
+                            <p>Even if it's not your size — I swear it's the size of my affection.</p>
+                            <p>(And I'm an engineer, so… trust the measurements.)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 24: The Finale -->
+                <div class="step" data-step="24">
+                    <h2>The Finale</h2>
+                    <div class="step-content">
+                        <div class="instruction">
+                            <p>🎈 Happy Birthday, Signorita.</p>
+                            <p>This box is not just a gift.</p>
+                            <p>It's a memory museum, a silent letter, a childhood flashback, a promise, and a hug
+                                wrapped in ribbon.</p>
+                            <p>You just finished something unforgettable —</p>
+                            <p>But remember,</p>
+                            <p class="quote">"Every memory here… was made by someone who never forgot a single second
+                                with you."</p>
+                            <p>💖 Dodo 🕊 June 15, 2025</p>
+                            <div class="final-buttons">
+                                <button class="primary-button" id="restartButton">💝 RESTART</button>
+                                <button class="secondary-button" id="closeButton">🔒 CLOSE JOURNEY</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button id="prevStep" class="nav-button" disabled>Previous</button>
+                <button id="nextStep" class="nav-button">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+                d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+        </svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

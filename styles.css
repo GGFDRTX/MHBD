@@ -1,0 +1,1470 @@
+:root {
+    --color-background: #fff9f5;
+    --color-text: #4a4a4a;
+    --color-accent: #e8b4b4;
+    --color-secondary: #f5e6e6;
+    --color-button: #d4a5a5;
+    --color-button-hover: #c49292;
+    --color-romantic-pink: #ffd1dc;
+    --color-dusty-rose: #dc8b9b;
+    --color-gentle-purple: #e6e6fa;
+    --color-muted-gold: #d4af37;
+    --color-rich-red: #c41e3a;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-handwriting: 'Dancing Script', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Landing Page Styles */
+#landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--color-background) 0%, var(--color-gentle-purple) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23ffd1dc" d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/></svg>') repeat;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+#landing h1 {
+    font-family: var(--font-handwriting);
+    font-size: 4rem;
+    color: var(--color-rich-red);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-text {
+    font-family: var(--font-handwriting);
+    font-size: 1.5rem;
+    color: var(--color-dusty-rose);
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Button Styles */
+.primary-button {
+    background: linear-gradient(45deg, var(--color-button), var(--color-dusty-rose));
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-handwriting);
+    position: relative;
+    overflow: hidden;
+    animation: glow 2s infinite;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 165, 165, 0.4);
+}
+
+.primary-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.primary-button:hover::after {
+    left: 100%;
+}
+
+.secondary-button {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: 1px solid var(--color-accent);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+/* Manual Section Styles */
+#manual {
+    padding: 2rem 0;
+}
+
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-accent);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.step:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.step h2 {
+    font-family: var(--font-handwriting);
+    color: var(--color-rich-red);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.instruction {
+    font-size: 1.1rem;
+}
+
+.note,
+.playful-note,
+.suggestion {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+.visual-hint {
+    margin-top: 1.5rem;
+}
+
+.image-placeholder {
+    background-color: var(--color-secondary);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--color-text);
+    font-style: italic;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-button {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(228, 180, 180, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(228, 180, 180, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(228, 180, 180, 0.5);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Landing Page */
+#landing {
+    background: linear-gradient(135deg, var(--color-background) 0%, var(--color-gentle-purple) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23ffd1dc" d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/></svg>') repeat;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+#landing h1 {
+    font-family: var(--font-handwriting);
+    font-size: 4rem;
+    color: var(--color-rich-red);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-text {
+    font-family: var(--font-handwriting);
+    font-size: 1.5rem;
+    color: var(--color-dusty-rose);
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Enhanced Button Styles */
+.primary-button {
+    background: linear-gradient(45deg, var(--color-button), var(--color-dusty-rose));
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-handwriting);
+    position: relative;
+    overflow: hidden;
+    animation: glow 2s infinite;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 165, 165, 0.4);
+}
+
+.primary-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.primary-button:hover::after {
+    left: 100%;
+}
+
+/* Enhanced Step Styles */
+.step {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-accent);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.step:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.step h2 {
+    font-family: var(--font-handwriting);
+    color: var(--color-rich-red);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Checklist Styles */
+.checklist {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--color-secondary);
+    border-radius: 15px;
+    border: 1px solid var(--color-accent);
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.checklist-item:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.checklist-item input[type="checkbox"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    margin-right: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checklist-item input[type="checkbox"]:checked {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.checklist-item input[type="checkbox"]:checked::after {
+    content: '❤';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+/* Music Player */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, var(--color-accent), var(--color-dusty-rose));
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.music-player:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.music-player.playing {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    #landing h1 {
+        font-size: 3rem;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+
+    .step h2 {
+        font-size: 1.5rem;
+    }
+
+    .instruction {
+        font-size: 1rem;
+    }
+
+    .checklist {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #landing h1 {
+        font-size: 2.5rem;
+    }
+
+    .primary-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .step {
+        padding: 1rem;
+    }
+}
+
+/* Login Form Styles */
+.login-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.romantic-input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid var(--color-accent);
+    border-radius: 15px;
+    font-family: var(--font-handwriting);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.romantic-input:focus {
+    outline: none;
+    border-color: var(--color-dusty-rose);
+    box-shadow: 0 0 10px rgba(220, 139, 155, 0.3);
+}
+
+.romantic-input.error {
+    border-color: var(--color-rich-red);
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+/* Confetti Animation */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--color-accent);
+    animation: confetti-fall 3s ease-in-out forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Floating Hearts */
+.floating-heart {
+    position: fixed;
+    top: -20px;
+    font-size: 20px;
+    color: var(--color-accent);
+    animation: float-up 5s linear forwards;
+    z-index: 100;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Sign Button Styles */
+.sign-button {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.sign-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.sign-button.signed {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    pointer-events: none;
+}
+
+/* Music Message */
+.music-message {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-handwriting);
+    color: var(--color-dusty-rose);
+    font-size: 1.1rem;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Storybook Login Styles */
+.storybook {
+    background: linear-gradient(135deg, #fff9f5 0%, #f5e6e6 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.storybook::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23ffd1dc" d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/></svg>') repeat;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.storybook-page {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    border: 1px solid var(--color-accent);
+    animation: fadeIn 1s ease-out;
+}
+
+.storybook-page h1 {
+    font-family: var(--font-handwriting);
+    font-size: 3rem;
+    color: var(--color-rich-red);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.story-content {
+    text-align: center;
+}
+
+.story-text {
+    font-family: var(--font-handwriting);
+    font-size: 1.4rem;
+    color: var(--color-dusty-rose);
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.story-text:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.story-text:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.story-text:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.story-text:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.magic-mirror {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 230, 230, 0.9));
+    border-radius: 15px;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: glow 2s infinite;
+}
+
+.mirror-text {
+    font-family: var(--font-handwriting);
+    font-size: 1.6rem;
+    color: var(--color-rich-red);
+    margin-bottom: 1.5rem;
+}
+
+.mirror-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.romantic-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--color-accent);
+    border-radius: 15px;
+    font-family: var(--font-handwriting);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.romantic-input:focus {
+    outline: none;
+    border-color: var(--color-dusty-rose);
+    box-shadow: 0 0 15px rgba(220, 139, 155, 0.3);
+    transform: scale(1.02);
+}
+
+.romantic-input.error {
+    border-color: var(--color-rich-red);
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(228, 180, 180, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(228, 180, 180, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(228, 180, 180, 0.5);
+    }
+}
+
+/* Responsive Design for Storybook */
+@media (max-width: 768px) {
+    .storybook-page {
+        padding: 2rem;
+    }
+
+    .storybook-page h1 {
+        font-size: 2.5rem;
+    }
+
+    .story-text {
+        font-size: 1.2rem;
+    }
+
+    .mirror-text {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .storybook-page {
+        padding: 1.5rem;
+    }
+
+    .storybook-page h1 {
+        font-size: 2rem;
+    }
+
+    .story-text {
+        font-size: 1.1rem;
+    }
+
+    .mirror-text {
+        font-size: 1.2rem;
+    }
+
+    .romantic-input {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Magical Animations */
+@keyframes magicalDisappear {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+@keyframes magicalAppear {
+    0% {
+        transform: scale(0) rotate(-10deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Initial state for landing page elements */
+#landing h1,
+#landing .welcome-text,
+#landing .primary-button {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Enhanced Landing Page Transitions */
+#landing.active h1 {
+    animation: magicalAppear 1s ease-out forwards;
+}
+
+#landing.active .welcome-text {
+    animation: magicalAppear 1s ease-out 0.3s forwards;
+}
+
+#landing.active .primary-button {
+    animation: magicalAppear 1s ease-out 0.6s forwards;
+}
+
+/* Sparkle Effect */
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--color-muted-gold);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle 1.5s linear infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1) rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Add sparkles to the storybook */
+.storybook-page::before,
+.storybook-page::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.storybook-page::before {
+    background: radial-gradient(circle at 50% 50%,
+            var(--color-muted-gold) 0%,
+            transparent 50%);
+    opacity: 0.1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes focusIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Add smooth scrolling to the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure sections take full viewport height */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Add transition for section visibility */
+section {
+    transition: opacity 0.5s ease-out;
+}
+
+section.hidden {
+    display: none;
+    opacity: 0;
+}
+
+section.active {
+    opacity: 1;
+}
+
+.final-message {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.final-message h3 {
+    color: #ff6b6b;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.final-message p {
+    color: #666;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Add a progress indicator for the 10 things */
+.step[data-step="5"] .step-content::before,
+.step[data-step="6"] .step-content::before,
+.step[data-step="7"] .step-content::before,
+.step[data-step="8"] .step-content::before,
+.step[data-step="9"] .step-content::before,
+.step[data-step="10"] .step-content::before,
+.step[data-step="11"] .step-content::before,
+.step[data-step="12"] .step-content::before,
+.step[data-step="13"] .step-content::before,
+.step[data-step="14"] .step-content::before {
+    content: attr(data-step);
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+}
+
+/* Final Buttons */
+.final-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Quote Style */
+.quote {
+    font-family: var(--font-handwriting);
+    font-size: 1.4rem;
+    color: var(--color-rich-red);
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-left: 3px solid var(--color-accent);
+    background: rgba(228, 180, 180, 0.1);
+    border-radius: 0 15px 15px 0;
+}
+
+/* Remove Checklist Panel Styles */
+.checklist-panel,
+.checklist-toggle {
+    display: none;
+}
+
+/* Confetti Animation */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--color-accent);
+    animation: confetti-fall 3s ease-in-out forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Enhanced Music Player */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, var(--color-accent), var(--color-dusty-rose));
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.music-player:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.music-player.playing {
+    animation: rotate 3s linear infinite;
+}
+
+/* Responsive Design Updates */
+@media (max-width: 768px) {
+    .quote {
+        font-size: 1.2rem;
+    }
+
+    .final-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote {
+        font-size: 1.1rem;
+    }
+}
+
+/* Floating Elements Animation */
+.floating-element {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    animation: float-around 15s linear infinite;
+}
+
+@keyframes float-around {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(100px, 50px) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(50px, 100px) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(-50px, 50px) rotate(270deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+/* Enhanced Step Transitions */
+.step {
+    position: relative;
+    overflow: hidden;
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,
+            var(--color-romantic-pink) 0%,
+            var(--color-gentle-purple) 50%,
+            var(--color-dusty-rose) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.step:hover::before {
+    opacity: 0.1;
+}
+
+/* Enhanced Button Effects */
+.primary-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.primary-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.primary-button:hover::before {
+    left: 100%;
+}
+
+/* Magical Entrance Animation */
+@keyframes magicalEntrance {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(10deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+.step.active {
+    animation: magicalEntrance 0.8s ease-out forwards;
+}
+
+/* Enhanced Background Effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 20%, var(--color-romantic-pink) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, var(--color-gentle-purple) 0%, transparent 50%);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+    animation: background-shift 20s ease-in-out infinite;
+}
+
+@keyframes background-shift {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Enhanced Text Effects */
+.step h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.step h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--color-accent),
+            transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.step:hover h2::after {
+    transform: scaleX(1);
+}
+
+/* Enhanced Note Style */
+.note {
+    position: relative;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-1deg);
+    transition: all 0.3s ease;
+}
+
+.note:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Sign Button */
+.sign-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.sign-button::after {
+    content: '❤️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.sign-button:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+}
+
+/* Enhanced Music Player */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, var(--color-accent), var(--color-dusty-rose));
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.music-player:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.music-player.playing {
+    animation: rotate 3s linear infinite;
+    background: linear-gradient(45deg, var(--color-dusty-rose), var(--color-rich-red));
+}
+
+/* Enhanced Confetti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--color-accent);
+    animation: confetti-fall 3s ease-in-out forwards;
+    transform-origin: center;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) rotate(180deg) scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Enhanced Final Message */
+.final-message {
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: final-message-appear 1s ease-out forwards;
+}
+
+@keyframes final-message-appear {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design Updates */
+@media (max-width: 768px) {
+    .step {
+        padding: 1.5rem;
+    }
+
+    .note {
+        padding: 0.8rem;
+    }
+
+    .music-player {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .step {
+        padding: 1rem;
+    }
+
+    .note {
+        padding: 0.6rem;
+    }
+
+    .music-player {
+        width: 35px;
+        height: 35px;
+    }
+}
